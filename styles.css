@@ -1,0 +1,45 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#6ee7b7;
+  --muted:#9aa4b2;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,#071129 0%, #0b0f1a 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px
+}
+.wrap{width:100%;max-width:420px}
+.card{
+  background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  border-radius:12px;padding:28px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.04)
+}
+h1{margin:0 0 6px;font-size:20px}
+.sub{color:var(--muted);margin-top:0;margin-bottom:18px}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input[type=email],input[type=password]{width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;font-size:15px}
+input:focus{outline:2px solid rgba(110,231,183,0.12);border-color:var(--accent)}
+.row{display:flex;gap:12px}
+.password-field{position:relative}
+#toggle-password{position:absolute;right:8px;top:36px;background:none;border:none;color:var(--muted);padding:6px;border-radius:6px;cursor:pointer}
+.options{display:flex;justify-content:space-between;align-items:center;margin-top:10px;margin-bottom:18px}
+.remember{display:flex;align-items:center;font-size:13px;color:var(--muted)}
+.remember input{margin-right:8px}
+.forgot{color:var(--muted);text-decoration:none;font-size:13px}
+.primary{width:100%;padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#34d399);border:none;color:#042018;font-weight:600;font-size:15px;cursor:pointer}
+.primary:active{transform:translateY(1px)}
+.divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px;margin:16px 0}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.03)}
+.socials{display:flex;gap:8px}
+.social{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);cursor:pointer}
+.signup{color:var(--muted);font-size:13px;margin-top:12px}
+#message{margin-top:10px;min-height:24px;font-size:14px}
+@media (max-width:420px){.card{padding:18px}}
+.vis-error{color:#ffb4b4}
+.vis-success{color:#bbf7d0}
